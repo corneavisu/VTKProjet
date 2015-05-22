@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1432143893 source:/home/exopole/Documents/Projet/VTKProject/CorneaVisualization/main.cpp
+	<iostream>
+	<fstream>
+	<string.h>
+	<stdlib.h>
+	<vector>
+	<list>
+	<sstream>
+	<cstring>
+	"ParserString.h"
+
+1432145120 /home/exopole/Documents/Projet/VTKProject/CorneaVisualization/include/ParserString.h
+	"iostream"
+	"vector"
+	"string"
+	<fstream>
+	"sstream"
+
+1432145264 source:/home/exopole/Documents/Projet/VTKProject/CorneaVisualization/src/ParserString.cpp
+	"ParserString.h"
+
