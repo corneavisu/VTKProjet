@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{ECFE60C0-43D3-60CD-E5B1-E156C18F1F85}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_5_2;UNITY_4_5;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\BFSCreate.cs" />
+     <Compile Include="Assets\BorderCornea.cs" />
+     <Compile Include="Assets\CorneaColorMapping.cs" />
+     <Compile Include="Assets\CorneaManager.cs" />
+     <Compile Include="Assets\CorneaMeshCreate.cs" />
+     <Compile Include="Assets\CorneaPostSurface.cs" />
+     <Compile Include="Assets\DigitalMovements.cs" />
+     <Compile Include="Assets\ElevationMapColors.cs" />
+     <Compile Include="Assets\GraphicsUserInterface.cs" />
+     <Compile Include="Assets\ImportData.cs" />
+     <Compile Include="Assets\MatricesLibrary.cs" />
+     <Compile Include="Assets\MenuLoadDatas.cs" />
+     <Compile Include="Assets\MobileUnityInterface.cs" />
+     <Compile Include="Assets\Pachymetry.cs" />
+     <Compile Include="Assets\PachymetryColors.cs" />
+     <Compile Include="Assets\PachymetryCornea.cs" />
+     <Compile Include="Assets\Sphere.cs" />
+     <Compile Include="Assets\VolumeDeformation.cs" />
+     <Compile Include="Assets\crossTargetMesh.cs" />
+     <Compile Include="Assets\iGUI\SampleCustomElements\iGUIMyButton.cs" />
+     <Compile Include="Assets\iGUI\SampleCustomElements\iGUIMyContainer.cs" />
+     <Compile Include="Assets\iGUI\SampleCustomElements\iGUIMyGridContainer.cs" />
+     <Compile Include="Assets\iGUI\SampleCustomElements\iGUIMyTextfield.cs" />
+     <Compile Include="Assets\iGUI\SampleCustomElements\iGUIMyTile.cs" />
+     <Compile Include="Assets\iGUI\iGUICode_CorneaScene.cs" />
+     <Compile Include="Assets\iGUI\iGUICode_MenuScene.cs" />
+     <None Include="Assets\iGUI\SampleCustomElements\readme.txt" />
+     <None Include="Assets\Resources\Cornees\21_cornea_pk.txt" />
+     <None Include="Assets\Resources\Cornees\20_cornea_pos.txt" />
+     <None Include="Assets\Resources\Cornees\23_cornea_pos.txt" />
+     <None Include="Assets\Resources\Cornees\19_cornea_pos.txt" />
+     <None Include="Assets\corneaShader.shader" />
+     <None Include="Assets\Resources\Cornees\16_cornea_pk.txt" />
+     <None Include="Assets\Resources\Cornees\1_cornea_pk.txt" />
+     <None Include="Assets\Resources\Cornees\17_cornea_pos.txt" />
+     <None Include="Assets\Resources\Cornees\16_cornea_pos.txt" />
+     <None Include="Assets\Resources\Cornees\24_cornea_pk.txt" />
+     <None Include="Assets\Resources\Cornees\15_cornea_pk.txt" />
+     <None Include="Assets\Resources\Cornees\18_cornea_ant.txt" />
+     <None Include="Assets\Resources\Cornees\20_cornea_ant.txt" />
+     <None Include="Assets\Resources\Cornees\25_cornea_pk.txt" />
+     <None Include="Assets\Resources\Cornees\19_cornea_pk.txt" />
+     <None Include="Assets\Resources\Cornees\1_cornea_pos.txt" />
+     <None Include="Assets\iGUI\iTweenReadme.txt" />
+     <None Include="Assets\Resources\Cornees\23_cornea_ant.txt" />
+     <None Include="Assets\Resources\Cornees\21_cornea_ant.txt" />
+     <None Include="Assets\Resources\Cornees\18_cornea_pk.txt" />
+     <None Include="Assets\Resources\Cornees\15_cornea_ant.txt" />
+     <None Include="Assets\iGUI\SampleSmartObjects\readme.txt" />
+     <None Include="Assets\Resources\Cornees\21_cornea_pos.txt" />
+     <None Include="Assets\Resources\Cornees\18_cornea_pos.txt" />
+     <None Include="Assets\Resources\Cornees\24_cornea_pos.txt" />
+     <None Include="Assets\iGUI\Files\Toolbox\readme.txt" />
+     <None Include="Assets\Resources\Cornees\19_cornea_ant.txt" />
+     <None Include="Assets\iGUI\Runtime\iGUI.xml" />
+     <None Include="Assets\Resources\Cornees\25_cornea_pos.txt" />
+     <None Include="Assets\Resources\Cornees\15_cornea_pos.txt" />
+     <None Include="Assets\iGUI\readme.txt" />
+     <None Include="Assets\Resources\Cornees\25_cornea_ant.txt" />
+     <None Include="Assets\Resources\Cornees\24_cornea_ant.txt" />
+     <None Include="Assets\iGUI\Files\Skin\Normal\readme.txt" />
+     <None Include="Assets\Resources\Cornees\23_cornea_pk.txt" />
+     <None Include="Assets\iGUI\Files\Skin\Retina\readme.txt" />
+     <None Include="Assets\Resources\Cornees\20_cornea_pk.txt" />
+     <None Include="Assets\Resources\Cornees\16_cornea_ant.txt" />
+     <None Include="Assets\iGUI\link.xml" />
+     <None Include="Assets\Resources\Cornees\17_cornea_pk.txt" />
+     <None Include="Assets\Resources\Cornees\17_cornea_ant.txt" />
+     <None Include="Assets\Resources\Cornees\1_cornea_ant.txt" />
+ <Reference Include="iGUI">
+ <HintPath>/Users/gabrielsaban/Desktop/Stage_cornee/final/CorneaApplicationUnity/Assets/iGUI/Runtime/iGUI.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

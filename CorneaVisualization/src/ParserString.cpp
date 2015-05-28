@@ -5,7 +5,13 @@ ParserString::ParserString()
     //ctor
 }
 
-std::vector<std::string> ParserString::explode( std::string delimiter, std::string str)
+/***
+*\fn std::vector<std::string> ParserString::explode(  std::string str, std::string delimiter)
+*\brief Parse a string into vector
+*\param a sentence and a delimiter
+*\return vector of string
+*/
+std::vector<std::string> ParserString::explode(  std::string str, std::string delimiter)
 {
 
     std::vector<std::string> result;
@@ -25,7 +31,12 @@ std::vector<std::string> ParserString::explode( std::string delimiter, std::stri
 
 
 }
-
+/***
+*\fn std::vector<std::string> ParserString::explode(  std::string str, char delimiter)
+*\brief Parse a string into vector
+*\param a sentence and a delimiter
+*\return vector of string
+*/
 std::vector<std::string> ParserString::explode(  std::string str, char delimiter)
 {
     std::vector<std::string> result;
@@ -39,68 +50,28 @@ std::vector<std::string> ParserString::explode(  std::string str, char delimiter
     return result;
 }
 
-
-
-
-void ParserString::vectorToString(std::vector <std::string>* vectorResult)
+/***
+*\fn double ParserString::stringToFloat(std::string str)
+*\brief string to float
+*\param a string
+*\return a double
+*/
+float ParserString::stringToFloat(std::string str)
 {
-
-    for (int i = 0 ; i < (int)vectorResult->size(); i++)
-    {
-        std::cout << (*vectorResult)[i] +" "     ;
-    }
-    std::cout << std::endl;
-
-}
-
-void ParserString::vectorOfVectorToString(std::vector<std::vector <std::string> >* vectorResult)
-{
-
-    for (int i = 0 ; i < (int)vectorResult->size(); i++)
-    {
-        ParserString::vectorToString(&(*vectorResult)[i])   ;
-    }
-
-}
-
-void ParserString::parserCSV(std::string namefile,std::vector<std::vector<std::string> >* result,  std::string delimiter=","){
-
-    std::ifstream file (namefile.c_str());
-    std::string line;
-
-
-    while(std::getline(file, line))
-    {
-        (*result).push_back(ParserString::explode(delimiter, line));
-
-    }
-
-
-
-}
-
-void ParserString::vecteurStringTofloatArray(std::vector<std::string> vecteur, float[] arr)
-{
-    for(int i = 0, i< vecteur.size(), i++)
-    {
-        if (vecteur[i] == "NULL")
-            (*arr[i]) = 0;
-        else
-        {
-            (*arr)[i]  = ParserString::stringToFloat(vecteur[i]);
-        }
-    }
-}
-
-double ParserString::stringToFloat(std::string str)
-{
-    istringstream buffer(str);
-    double temp;
+    std::istringstream buffer(str);
+    float temp;
     buffer >> temp;
     return temp;
 }
 
-
+std::string ParserString::trim(std::string str)
+{
+    std::string whitespace = " \t\f\v\n\r";
+    int start = str.find_first_not_of(whitespace);
+    int fin = str.find_last_not_of(whitespace);
+    std::string newstr= str.substr(start, fin);
+   return newstr;
+}
 
 ParserString::~ParserString()
 {

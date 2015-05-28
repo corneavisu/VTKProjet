@@ -6,19 +6,29 @@
 #include <fstream>
 #include "sstream"
 
-
+/**
+*\file ParserString.cpp
+*\brief Parse objet
+*\author Alexandre.N
+*\date 22/05/15
+*
+*Objet to parse some string element (vector, string, ...)
+*/
 class ParserString
 {
     public:
         ParserString();
         virtual ~ParserString();
+
+        ///\brief Parse a string into vector
         static std::vector<std::string> explode( std::string delimiter, std::string str);
-        static void vectorToString(std::vector <std::string>* vectorResult);
-        static void vectorOfVectorToString(std::vector<std::vector <std::string> >* vectorResult);
-        static void parserCSV(std::string namefile, std::vector<std::vector<std::string> >* result,std::string delimiter);
         static std::vector<std::string> explode( std::string str, char delimiter );
-        static void vecteurStringTofloatArray(std::vector<std::string> vecteur, float[] arr );
-        static double stringToFloat(std::string);
+
+        static std::string trim(std::string str);
+
+        ///\brief return a float from a string
+        static float stringToFloat(std::string);
+
     protected:
     private:
 };

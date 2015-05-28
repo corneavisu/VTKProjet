@@ -26,38 +26,10 @@ int main(int argc, char *argv[])
     // si le fichier existe bien
     if (fichier)
     {
-        std::string line;
-//        string delimiters = "::";
-        std::vector<std::vector<std::string> > stringList;
 
-        std::string foo = "Table Value";
-        std::string delimiter = "::";
-        double matriceValeur[101][101];
-        char delimiter2 = ',';
-        int index = 0;
+        ParserTopos newTopos(filename);
+        newTopos.printAllDataName();
 
-        ParserString::parserCSV(filename,&stringList ,delimiter );
-
-         while(index < (int)stringList.size())
-         {
-            if (stringList[index][0] == "Table Value")
-            {
-                index++;
-                while(stringList[index][0] == "X[mm], Value[mm]")
-                {
-                    std::vector<std::string> vecteurTmp(ParserString::explodeTableau(stringList[index][1], delimiter2));
-                    vecteurTmp.erase(vecteurTmp.begin());
-                    ParserString::vectorToString(&vecteurTmp );
-                    index++;
-                }
-                index = stringList.size();
-            }
-            else
-            {
-                index++;
-            }
-
-         }
 
 
     }

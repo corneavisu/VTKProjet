@@ -1,0 +1,20 @@
+################### README of VTK poject in C++ ######################
+
+##### Installation of VTK #######
+I used synaptic who is very simple of use. It is a software who let us to install severall package easily. Here I installed all package of VTK 6.
+
+tape : 
+	sudo synaptic
+
+package :
+	vtk6
+	vtk6-examples
+	vtk6-doc
+	tcl-vtk6
+	python-vtk6
+	libvtk6
+	libvtk6-java
+	libvtk6-dev
+
+To execute some example we will need Cmake too
+	
