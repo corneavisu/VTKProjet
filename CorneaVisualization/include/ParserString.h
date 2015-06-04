@@ -23,7 +23,9 @@ class ParserString
         ///\brief Parse a string into vector
         static std::vector<std::string> explode( std::string delimiter, std::string str);
         static std::vector<std::string> explode( std::string str, char delimiter );
+        static std::vector<float> StringtoFloatVector(std::string str, char delimiter);
 
+        ///\brief erase all space in the start and the end of a sentence
         static std::string trim(std::string str);
 
         ///\brief return a float from a string

@@ -30,7 +30,25 @@ std::string DataCornee::getName()
 */
 void DataCornee::getData(float data[SIZEMAX][SIZEMAX]){
 
-    data = m_data;
+    DataCornee::copieTableau(data);
+}
+
+/**
+*\fn DataCornee::getData(float data[SIZEMAX][SIZEMAX])
+*\brief copie the data in a matrice 2D of float
+*\param matrice 2d of float
+*/
+std::vector<std::vector<float> > DataCornee::getData(){
+
+    std::vector<std::vector<float> > dest;
+    std::vector<float>  line;
+    for(int i = 0; i< SIZEMAX; i++)
+    {
+        for(int j = 0; j< SIZEMAX; j++)
+            line.push_back(DataCornee::getData(i,j));
+        dest.push_back(line);
+    }
+    return dest;
 }
 
 /**

@@ -8,6 +8,7 @@
 #include <cstring>
 #include "ParserString.h"
 #include "ParserTopos.h"
+#include "VtkUse.h"
 
 
 int main(int argc, char *argv[])
@@ -29,7 +30,7 @@ int main(int argc, char *argv[])
 
         ParserTopos newTopos(filename);
         newTopos.printAllDataName();
-
+        VtkUse newVTK(newTopos.getAnteriorData(), 99);
 
 
     }

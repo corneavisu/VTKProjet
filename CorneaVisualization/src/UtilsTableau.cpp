@@ -31,6 +31,7 @@ void UtilsTableau::copieFloat2D(float** init, float** dest, int taille)
 }
 
 
+
 UtilsTableau::~UtilsTableau()
 {
     //dtor

@@ -50,6 +50,15 @@ std::vector<std::string> ParserString::explode(  std::string str, char delimiter
     return result;
 }
 
+std::vector<float> ParserString::StringtoFloatVector(std::string str, char delimiter)
+{
+    std::vector<float> destArray;
+    std::vector <std::string> strVect = ParserString::explode(str, delimiter);
+    for (int i =0; i< (int) strVect.size(); i++)
+        destArray.push_back(ParserString::stringToFloat(strVect[i])) ;
+    return destArray;
+}
+
 /***
 *\fn double ParserString::stringToFloat(std::string str)
 *\brief string to float
@@ -64,6 +73,13 @@ float ParserString::stringToFloat(std::string str)
     return temp;
 }
 
+
+/***
+*\fn std::string ParserString::trim(std::string str)
+*\brief erase all space in the start or end of a sentence
+*\param string wiht maybe a space in the start or end
+*\return string without space in the start or end
+*/
 std::string ParserString::trim(std::string str)
 {
     std::string whitespace = " \t\f\v\n\r";

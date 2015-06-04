@@ -52,13 +52,13 @@ void UtilsVector::vectorOfStringVectorToString(std::vector<std::vector <std::str
 *
 *use stringToFloat
 */
-void UtilsVector::vecteurStringTofloatArray(std::vector<std::string> vecteur, float arr[101])
+void UtilsVector::vecteurStringTofloatArray(std::vector<std::string> vecteur, float arr[101], float valeurNull)
 {
     for(int i = 0; i< (int)vecteur.size(); i++)
     {
 
         if (vecteur[i] == "NULL")
-            arr[i] = 0.0;
+            arr[i] =valeurNull;
         else
         {
             arr[i]  = ParserString::stringToFloat(vecteur[i]);
@@ -96,13 +96,28 @@ void UtilsVector::vecteurStringTofloatVector(std::vector<std::string> vecteurStr
 *
 *use stringToFloat
 */
-void UtilsVector::vecteurofVecteurStringTofloatArray(std::vector<std::vector<std::string> > vecteur, float arr[101][101])
+void UtilsVector::vecteurofVecteurStringTofloatArray(std::vector<std::vector<std::string> > vecteur, float arr[101][101], int valeurNull)
 {
     for(int i = 0; i< (int)vecteur.size(); i++)
-        UtilsVector::vecteurStringTofloatArray(vecteur[i], arr[i]);
+        UtilsVector::vecteurStringTofloatArray(vecteur[i], arr[i], valeurNull);
 }
 
-
+/***
+*\fn UtilsVector::countValueInSquareVector(float value, std::vector<std::vector<float> > matrice)
+*\brief count the number of a value in a matrice
+*\param value float
+*\param matrice of float
+*\return integer (number of value)
+*/
+int UtilsVector::countValueInSquareVector(float value, std::vector<std::vector<float> > matrice)
+{
+    int compteur(0);
+    for (int i = 0; i< (int) matrice.size(); i++)
+        for (int j = 0; j < (int) matrice.size(); j++)
+            if (matrice[i][j] == value)
+                compteur++;
+    return compteur;
+}
 
 UtilsVector::~UtilsVector()
 {
