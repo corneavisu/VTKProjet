@@ -29,18 +29,27 @@ void ParserTopos::readToposFile()
             if (ParserTopos::buildMatrice(&(++index), stringList, matriceValeur)) /// build the data matrice
                 dataList.push_back(DataCornee(ParserString::trim(name), matriceValeur)); /// add the data object in a vector
         }
-        else if (stringList[index][0] == "Ref Radius[mm]")
-            if (name == "Anterior Best Fit Sphere")
-                radiusBFSAnterior = ParserString::stringToFloat(stringList[index][1]);
-            else
-                radiusBFSPosterior = ParserString::stringToFloat(stringList[index][1]);
-        else if (stringList[index][0] == "Ref Center: X, Y, Z[mm]")
-            if (name == "Anterior Best Fit Sphere")
-                coordBFSAnterior = ParserString::StringtoFloatVector(stringList[index][1],delimiterList);
-            else
-                coordBFSPosterior = ParserString::StringtoFloatVector(stringList[index][1], delimiterList);
         else
+        {
+            if (stringList[index][0] == "Ref Radius[mm]")
+            {
+                if (name == "Anterior Best Fit Sphere")
+                    radiusBFSAnterior = ParserString::stringToFloat(stringList[index][1]);
+                else
+                    radiusBFSPosterior = ParserString::stringToFloat(stringList[index][1]);
+            }
+            else if (stringList[index][0] == "Ref Center: X, Y, Z[mm]")
+            {
+                if (name == "Anterior Best Fit Sphere")
+                    coordBFSAnterior = ParserString::StringtoFloatVector(stringList[index][1],delimiterList);
+                else
+                    coordBFSPosterior = ParserString::StringtoFloatVector(stringList[index][1], delimiterList);
+            }
+
             index++;
+
+        }
+
 }
 
 

@@ -35,12 +35,12 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/DataCornee.h" />
-		<Unit filename="include/File.h" />
 		<Unit filename="include/ParserString.h" />
 		<Unit filename="include/ParserTopos.h" />
 		<Unit filename="include/UtilsFile.h" />
 		<Unit filename="include/UtilsTableau.h" />
 		<Unit filename="include/UtilsVector.h" />
+		<Unit filename="include/VTKPlot3D.h" />
 		<Unit filename="include/VtkUse.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/DataCornee.cpp" />
@@ -49,6 +49,7 @@
 		<Unit filename="src/UtilsFile.cpp" />
 		<Unit filename="src/UtilsTableau.cpp" />
 		<Unit filename="src/UtilsVector.cpp" />
+		<Unit filename="src/VTKPlot3D.cpp" />
 		<Unit filename="src/VtkUse.cpp" />
 		<Extensions>
 			<code_completion />
