@@ -47,7 +47,9 @@ std::vector<std::vector<float> > DataCornee::getData(){
         for(int j = 0; j< SIZEMAX; j++)
             line.push_back(DataCornee::getData(i,j));
         dest.push_back(line);
+        line.clear();
     }
+
     return dest;
 }
 
@@ -57,7 +59,7 @@ std::vector<std::vector<float> > DataCornee::getData(){
 *\param coord x and y of the value
 *\return a value
 */
-int DataCornee::getData(int x, int y)
+float DataCornee::getData(int x, int y)
 {
     return m_data[x][y];
 }

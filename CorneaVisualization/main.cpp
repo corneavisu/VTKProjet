@@ -1,29 +1,34 @@
+
+// include these define if you don't use cmake
+#include <vtkAutoInit.h>
+#define VTK_MODULE_INIT(vtkRenderingOpenGL);
+
+#define vtkRenderingCore_AUTOINIT 4(vtkInteractionStyle,vtkRenderingFreeType,vtkRenderingFreeTypeOpenGL,vtkRenderingOpenGL)
+#define vtkRenderingVolume_AUTOINIT 1(vtkRenderingVolumeOpenGL)
+
 #include <iostream>
 #include <fstream>
-#include <string.h>
-#include <stdlib.h>
-#include <vector>
-#include <list>
 #include <sstream>
 #include <cstring>
 #include "ParserString.h"
 #include "ParserTopos.h"
-#include "VtkUse.h"
-#include "VTKPlot3D.h"
-#include "TestPlotMatrix.h"
+#include "ColorElevationMap.h"
+
+
 
 
 int main(int argc, char *argv[])
 {
     // test si un argument a été mis au niveau de
-    if(argc <= 2)
+    std::cout << argc << std::endl;
+    if(argc <= 1)
     {
         std::cout << "Usage: " << argv[0] << " File Topos.txt" << std::endl;
         return EXIT_FAILURE;
     }
 
     std::string filename = argv[1];
-    std::string filetest = argv[2];
+  //  std::string filetest = argv[2];
 
     std::ifstream fichier(filename.c_str());
 
@@ -35,13 +40,9 @@ int main(int argc, char *argv[])
         std::cout << "Etape 2 : "<< std::endl;
         newTopos.printAllDataName();
         std::cout << "Etape 3 : "<< std::endl;
-        VtkUse newVTK(newTopos.getAnteriorData(), newTopos.getAnteriorBFSData(), 99);
-//        std::cout << "Etape 4 : "<< std::endl;
-//        newVTK.TestPlotMatrix();
-        std::cout << "Etape 5 :" << std::endl;
-//        VTKPlot3D newPot3D(filetest);
-        std::cout << "Etape 6 : " << std::endl;
-//        TestPlotMatrix newTest();
+        ColorElevationMap newMap(newTopos.getAnteriorData(),newTopos.getAnteriorBFSData(), 99.9);
+        newMap.visualisation();
+
     }
     else
     {

@@ -34,26 +34,35 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/ColorElevationMap.h" />
 		<Unit filename="include/DataCornee.h" />
 		<Unit filename="include/ParserString.h" />
 		<Unit filename="include/ParserTopos.h" />
 		<Unit filename="include/UtilsFile.h" />
 		<Unit filename="include/UtilsTableau.h" />
 		<Unit filename="include/UtilsVector.h" />
-		<Unit filename="include/VTKPlot3D.h" />
-		<Unit filename="include/VtkUse.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/ColorElevationMap.cpp" />
 		<Unit filename="src/DataCornee.cpp" />
 		<Unit filename="src/ParserString.cpp" />
 		<Unit filename="src/ParserTopos.cpp" />
 		<Unit filename="src/UtilsFile.cpp" />
 		<Unit filename="src/UtilsTableau.cpp" />
 		<Unit filename="src/UtilsVector.cpp" />
-		<Unit filename="src/VTKPlot3D.cpp" />
-		<Unit filename="src/VtkUse.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
+			<DoxyBlocks>
+				<comment_style block="1" line="1" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output html="0" />
+				<doxyfile_preprocessor enable_preprocessing="0" />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+			<envvars />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

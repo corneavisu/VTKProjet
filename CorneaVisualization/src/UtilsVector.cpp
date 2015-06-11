@@ -119,6 +119,67 @@ int UtilsVector::countValueInSquareVector(float value, std::vector<std::vector<f
     return compteur;
 }
 
+/*!
+* \fn void UtilsVector::printFloatVector(std::vector<std::vector<float> > vecteur)
+* \brief print all the data from a vector of float vector
+* \
+*/
+void UtilsVector::printFloatVector(std::vector<std::vector<float> > vecteur)
+{
+    for (int x = 0; x< (int) vecteur.size(); x++)
+    {
+        for (int y = 0; y< (int) vecteur[x].size(); y++)
+        {
+            std::cout << vecteur[x][y] <<  " ";
+        }
+        std::cout << std::endl;
+    }
+}
+
+float UtilsVector::getMin(std::vector<std::vector<float> > vecteur)
+{
+    float minimun = vecteur[0][0];
+     for (int x = 0; x< (int) vecteur.size(); x++)
+        for (int y = 0; y< (int) vecteur[x].size(); y++)
+            if (vecteur[x][y] < minimun) minimun = vecteur[x][y];
+      return minimun;
+}
+
+float UtilsVector::getMin(std::vector<std::vector<float> > vecteur, float valeurIgnore)
+{
+    float minimun = vecteur[0][0];
+     for (int x = 0; x< (int) vecteur.size(); x++)
+        for (int y = 0; y< (int) vecteur[x].size(); y++)
+            if (vecteur[x][y] < minimun && vecteur[x][y] != valeurIgnore)
+            {
+              minimun = vecteur[x][y];
+            }
+      return minimun;
+}
+
+float UtilsVector::getMax(std::vector<std::vector<float> > vecteur)
+{
+    float maximum = 0;
+     for (int x = 0; x< (int) vecteur.size(); x++)
+        for (int y = 0; y< (int) vecteur[x].size(); y++)
+            if (vecteur[x][y] > maximum)
+              maximum = vecteur[x][y];
+      return maximum;
+}
+
+float UtilsVector::getMax(std::vector<std::vector<float> > vecteur,float valeurIgnore )
+{
+    float maximum = 0;
+     for (int x = 0; x< (int) vecteur.size(); x++)
+        for (int y = 0; y< (int) vecteur[x].size(); y++)
+            if (vecteur[x][y] > maximum && vecteur[x][y] != valeurIgnore)
+            {
+              maximum = vecteur[x][y];
+            }
+
+      return maximum;
+}
+
 UtilsVector::~UtilsVector()
 {
     //dtor

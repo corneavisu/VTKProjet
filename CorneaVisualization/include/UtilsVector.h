@@ -24,6 +24,13 @@ class UtilsVector
         ///\brief return an integer, number of a value in a matrice
         static int countValueInSquareVector(float value, std::vector<std::vector<float> > matrice);
 
+        ///\brief return a float
+        static float getMin(std::vector<std::vector<float> > matrice);
+        static float getMax(std::vector<std::vector<float> > matrice);
+        static float getMin(std::vector<std::vector<float> > matrice, float valeurIgnore);
+        static float getMax(std::vector<std::vector<float> > matrice, float valeurIgnore);
+
+        static void printFloatVector(std::vector<std::vector<float> > vecteur);
     protected:
     private:
 };

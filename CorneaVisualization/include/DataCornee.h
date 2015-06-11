@@ -2,7 +2,7 @@
 #define DATACORNEE_H
 #include "iostream"
 #include "string"
-#include "vector"
+#include "UtilsVector.h"
 /**
 *\file DataCornee.h
 *\brief Objet of cornee data
@@ -25,7 +25,7 @@ class DataCornee
         std::string getName();
         void getData(float data[SIZEMAX][SIZEMAX]);
         std::vector<std::vector<float> > getData();
-        int getData(int x, int y);
+        float getData(int x, int y);
         void dataToString();
         bool testDataVide();
 

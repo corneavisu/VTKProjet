@@ -228,10 +228,6 @@ bool ParserTopos::getPachymetry(float dest[SIZEMAX][SIZEMAX])
     return ParserTopos::getDataByName("0.92 Pachymetry", dest);
 }
 
-
-
-
-
 /***
 *\fn bool ParserTopos::getDataByName(std::string name, float dest[SIZEMAX][SIZEMAX])
 *\brief copie of data in a aray float 2d from a name
@@ -246,6 +242,7 @@ std::vector<std::vector<float> > ParserTopos::getDataByName(std::string name)
 
     if (i<(int)dataList.size())
     {
+        //UtilsVector::printFloatVector(dataList[i].getData());
         return dataList[i].getData();
     }
     else
@@ -285,6 +282,7 @@ std::vector<std::vector<float> > ParserTopos::getDataByNumber(int number)
 */
 std::vector<std::vector<float> > ParserTopos::getAnteriorData()
 {
+    //UtilsVector::printFloatVector(ParserTopos::getDataByName("True Elevation Anterior"));
     return ParserTopos::getDataByName("True Elevation Anterior");
 }
 /***
