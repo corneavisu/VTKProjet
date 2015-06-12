@@ -122,10 +122,11 @@
 	"vtkContextScene.h"
 	"vtkRenderWindowInteractor.h"
 
-1434036145 /home/exopole/Documents/Projet/VTKProject/CorneaVisualization/include/ColorElevationMap.h
+1434050268 /home/exopole/Documents/Projet/VTKProject/CorneaVisualization/include/ColorElevationMap.h
 	"vtkActor.h"
 	"vtkCamera.h"
 	"vtkCellArray.h"
+	"vtkCommand.h"
 	"vtkFloatArray.h"
 	"vtkPointData.h"
 	"vtkPoints.h"
@@ -134,8 +135,30 @@
 	"vtkRenderWindow.h"
 	"vtkRenderWindowInteractor.h"
 	"vtkRenderer.h"
+	"vtkMyCallback.h"
 	"UtilsVector.h"
 
-1434043105 source:/home/exopole/Documents/Projet/VTKProject/CorneaVisualization/src/ColorElevationMap.cpp
+1434051737 source:/home/exopole/Documents/Projet/VTKProject/CorneaVisualization/src/ColorElevationMap.cpp
 	"ColorElevationMap.h"
+
+1434047172 /home/exopole/Documents/Projet/VTKProject/CorneaVisualization/include/vtkMyCalback.h
+	"vtkCommand.h"
+	"vtkBoxWidget.h"
+	"vtkTransform.h"
+
+1434051446 /home/exopole/Documents/Projet/VTKProject/CorneaVisualization/include/vtkMyCallback.h
+	"vtkConeSource.h"
+	"vtkPolyDataMapper.h"
+	"vtkRenderWindow.h"
+	"vtkRenderWindowInteractor.h"
+	"vtkCamera.h"
+	"vtkActor.h"
+	"vtkRenderer.h"
+	"vtkCommand.h"
+	"vtkBoxWidget.h"
+	"vtkTransform.h"
+	"vtkInteractorStyleTrackballCamera.h"
+
+1434051406 source:/home/exopole/Documents/Projet/VTKProject/CorneaVisualization/src/vtkMyCallback.cpp
+	"vtkMyCallback.h"
 

@@ -41,6 +41,7 @@
 		<Unit filename="include/UtilsFile.h" />
 		<Unit filename="include/UtilsTableau.h" />
 		<Unit filename="include/UtilsVector.h" />
+		<Unit filename="include/vtkMyCallback.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/ColorElevationMap.cpp" />
 		<Unit filename="src/DataCornee.cpp" />
@@ -49,6 +50,7 @@
 		<Unit filename="src/UtilsFile.cpp" />
 		<Unit filename="src/UtilsTableau.cpp" />
 		<Unit filename="src/UtilsVector.cpp" />
+		<Unit filename="src/vtkMyCallback.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
